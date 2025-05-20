@@ -42,6 +42,14 @@ public class Smartphone {
         return serial != null && serial.equals(smartphone.serial);
     }
 
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serial='" + serial + '\'' +
+                ", brand='" + brand + '\'' +
+                '}';
+    }
+
     //EQUALS E HASH CODE TEM QUE ANDAR LADO A LADO E USAR OS MESMOS ELEMENTOS DE COMPARAÇÃO PARA NÃO FAZER MERDA
     //hash code é como se fosse uma etiqueta que ajuda a identifcar mais rapido o valor na memória.
     //por exemplo, você coloca para gerar o hash code a partir do serial, ai temos uma base de dados com gigantesca com vários seriais lá
