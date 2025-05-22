@@ -3,9 +3,17 @@ package sorting_lists;
 import sorting_lists.entities.Manga;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class MangaIdComparator implements Comparator<Manga> {
+
+    @Override
+    public int compare(Manga o1, Manga o2) {
+        return o1.getId().compareTo(o2.getId());
+    }
+}
 
 public class SortingManga {
 
@@ -27,6 +35,14 @@ public class SortingManga {
 
         System.out.println("------------------------------");
         //depois de ordenar
+        for (Manga manga : mangas) {
+            System.out.println(manga.toString());
+        }
+
+        //utilizando comparator que permite adicionar mais alguma ordenação além da definida no comparable
+        mangas.sort(new MangaIdComparator());
+
+
         for (Manga manga : mangas) {
             System.out.println(manga.toString());
         }
