@@ -57,5 +57,11 @@ public class FirstLock {
         thread.start();
         thread2.start();
 
+        //no reentrant lock para usar a casse wait, notify e notifyAll, você precisa usar a classe Condition e usar os seguintes métodos:
+        // wait -> await
+        // notify -> signal
+        // notifyAll -> sigmalAll
+
+
     }
 }
