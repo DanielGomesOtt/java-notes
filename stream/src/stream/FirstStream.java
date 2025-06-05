@@ -34,5 +34,8 @@ public class FirstStream {
         var sum = numbers.stream().reduce(0, Integer::sum);// reduz todos os valores em 1 só
         System.out.println(sum);
 
+        fruits.parallelStream()
+                .forEach(fruit -> System.out.println("Thread: " + Thread.currentThread().getName() + " " +  fruit));
+
     }
 }
